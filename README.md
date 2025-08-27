@@ -16,10 +16,14 @@ This repo turns **DINOv3** (Meta) into a **frozen backbone** for **Faster R-CNN*
 ### 0) Environment
 
 ```bash
-pip install -U torch torchvision --index-url https://download.pytorch.org/whl/cu121
-pip install -U "transformers>=4.56.0.dev0" huggingface_hub safetensors accelerate pycocotools
-# optional HF transfer acceleration:
-pip install -U hf-transfer && export HF_HUB_ENABLE_HF_TRANSFER=1
+# Hugging Face tools + speedups
+!pip install -q -U hf-transfer huggingface_hub safetensors accelerate
+
+# GPU build of PyTorch (CUDA 12.1). If you’re CPU-only, replace cu121 with 'cpu'.
+!pip install -q -U torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+# Bleeding-edge Transformers from source (needed because dinov3_vit is new!)
+!pip install -q git+https://github.com/huggingface/transformers.git
 ```
 
 > Colab users: enable GPU, then run the above cells.
