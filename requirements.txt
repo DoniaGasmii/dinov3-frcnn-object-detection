@@ -1,7 +1,0 @@
-torch>=2.1
-torchvision>=0.16
-transformers @ git+https://github.com/huggingface/transformers.git
-huggingface_hub>=0.34
-safetensors>=0.4.3
-accelerate>=0.33
-pycocotools>=2.0.8
