@@ -140,7 +140,7 @@ Backbone is **frozen** by default; only the detection head (RPN + ROI heads/FPN)
 ## Notes on access & gating
 
 * Some DINOv3 checkpoints are **gated on Hugging Face**. You must apply and accept the license to use them.
-* If you don’t want to authenticate in Colab, **use a local snapshot path** as `model_id`—no network calls.
+* If you don’t want to authenticate in Colab, **use a local snapshot path** as `model_id`(no network calls).
 
 ---
 
