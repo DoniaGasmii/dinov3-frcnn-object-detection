@@ -9,7 +9,6 @@ It supports both **HF Hub** and **local snapshots** of the DINOv3 checkpoints.
 - Works with **YOLO-style labels** via provided converters (`yolo → torchvision json`) or directly with **COCO JSON**.  
 - Per-epoch **COCO mAP evaluation** (mAP, AP50, AP75).  
 
-````markdown
 # Quickstart
 
 ## **0) Environment**
