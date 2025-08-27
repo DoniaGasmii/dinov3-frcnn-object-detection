@@ -1,0 +1,27 @@
+# Paths
+data_root: "/content/drive/MyDrive/DISAL/Disal-Data/Benchmarks/MOCS"
+
+train_images: "/content/drive/MyDrive/DISAL/Disal-Data/Benchmarks/MOCS/images/train"
+val_images:   "/content/drive/MyDrive/DISAL/Disal-Data/Benchmarks/MOCS/images/val"
+
+train_ann:    "/content/drive/MyDrive/DISAL/Disal-Data/Benchmarks/MOCS/annotations/train/annotations_torchvision.json"
+val_ann:      "/content/drive/MyDrive/DISAL/Disal-Data/Benchmarks/MOCS/annotations/val/annotations_torchvision.json"
+
+ckpt_dir:     "/content/drive/MyDrive/DISAL/Disal-Data/Benchmarks/MOCS/checkpoints_frcnn_dinov3"
+
+# Model
+model_id: "/content/drive/MyDrive/DISAL/Disal-Data/models/dinov3_experiments/dinov3-7b"   # swap to smaller backbone if OOM
+hidden_dim: 256
+min_size: 800
+max_size: 1333
+
+# Optim
+epochs: 20
+batch_size: 2
+lr: 2.0e-4
+weight_decay: 1.0e-4
+grad_clip: 1.0
+
+# RPN
+anchor_sizes: [[32, 64, 128], [64, 128, 256], [128, 256, 512]]
+aspect_ratios: [[0.5, 1.0, 2.0], [0.5, 1.0, 2.0], [0.5, 1.0, 2.0]]
